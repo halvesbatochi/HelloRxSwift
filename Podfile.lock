@@ -1,16 +1,21 @@
 PODS:
+  - RxCocoa (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
   - RxSwift (4.5.0)
 
 DEPENDENCIES:
+  - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
 
 SPEC REPOS:
   trunk:
+    - RxCocoa
     - RxSwift
 
 SPEC CHECKSUMS:
+  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
 
-PODFILE CHECKSUM: 69ad5a4a53dc615e5596a879a17d1de0f715cf01
+PODFILE CHECKSUM: 2eeb9259c28b72cc5ac815639b83f8d33f4d5430
 
 COCOAPODS: 1.11.3
