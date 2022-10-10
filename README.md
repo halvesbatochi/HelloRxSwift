@@ -13,3 +13,14 @@
         * Replay Subjects
         * Variables
         * BehaviorRelay
+
+    * Filtering Operators
+        * Ignore
+        * Element At
+        * Filter
+        * Skip
+        * Skip while
+        * Skip until
+        * Take
+        * Take while
+        * Take until
