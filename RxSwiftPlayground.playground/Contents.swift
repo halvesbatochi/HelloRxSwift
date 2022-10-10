@@ -161,11 +161,21 @@ import PlaygroundSupport
 //strikes.onNext("X")
 
 // FILTER
+//
+//let disposeBag = DisposeBag()
+//
+//Observable.of(1,2,3,4,5,6,7)
+//    .filter { $0 % 2 == 0 }
+//    .subscribe(onNext: {
+//        print($0)
+//    }).disposed(by: disposeBag)
 
-let disposeBag = DisposeBag()
-
-Observable.of(1,2,3,4,5,6,7)
-    .filter { $0 % 2 == 0 }
-    .subscribe(onNext: {
-        print($0)
-    }).disposed(by: disposeBag)
+// SKIP
+//
+//let disposeBag = DisposeBag()
+//
+//Observable.of("A", "B", "C", "D", "E", "F")
+//    .skip(3)
+//    .subscribe(onNext: {
+//        print($0)
+//    }).disposed(by: disposeBag)
