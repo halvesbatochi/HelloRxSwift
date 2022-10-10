@@ -1,11 +1,17 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import PlaygroundSupport
 
-let observable  = Observable.just(1)
-let observable2 = Observable.of(1,2,3)
-let observable3 = Observable.of([1,2,3])
-let observable4 = Observable.from([1,2,3,4,5])
+
+//-------------------------------------------------//
+// SECTION 5: OBSERVABLES                          //
+//-------------------------------------------------//
+
+//let observable  = Observable.just(1)
+//let observable2 = Observable.of(1,2,3)
+//let observable3 = Observable.of([1,2,3])
+//let observable4 = Observable.from([1,2,3,4,5])
 
 // Lecture 1 - Types Obseervables
 //observable4.subscribe { event in
@@ -39,6 +45,10 @@ let observable4 = Observable.from([1,2,3,4,5])
 //    return Disposables.create()
 //}.subscribe(onNext: { print($0) }, onError: { print($0)}, onCompleted: { print("Completed")}, onDisposed: { print("Disposed")})
 //    .disposed(by: disposeBag)
+
+//-------------------------------------------------//
+// SECTION 3: SUBJECTS                             //
+//-------------------------------------------------//
 
 // Lecture 3 - Subjects
 //let disposeBag = DisposeBag()
@@ -107,3 +117,29 @@ let observable4 = Observable.from([1,2,3,4,5])
 //        print($0)
 //    }
 
+//-------------------------------------------------//
+// SECTION 3: IMPLEMENTING APP - CAMERA FILTER     //
+//-------------------------------------------------//
+
+//-------------------------------------------------//
+// SECTION 3: IMPLEMENTING APP - CAMERA FILTER     //
+//-------------------------------------------------//
+
+//-------------------------------------------------//
+// SECTION 5: FILTERING OPERATORS                  //
+//-------------------------------------------------//
+
+let strikes = PublishSubject<String>()
+let disposeBag = DisposeBag()
+
+strikes
+    .ignoreElements()
+    .subscribe { _ in
+        print("[Subscription is called]")
+    }.disposed(by: disposeBag)
+
+strikes.onNext("A")
+strikes.onNext("B")
+strikes.onNext("C")
+
+strikes.onCompleted()
