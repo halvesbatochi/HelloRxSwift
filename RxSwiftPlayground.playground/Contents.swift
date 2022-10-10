@@ -129,17 +129,33 @@ import PlaygroundSupport
 // SECTION 5: FILTERING OPERATORS                  //
 //-------------------------------------------------//
 
+// IGNORE
+
+//let strikes = PublishSubject<String>()
+//let disposeBag = DisposeBag()
+//
+//strikes
+//    .ignoreElements()
+//    .subscribe { _ in
+//        print("[Subscription is called]")
+//    }.disposed(by: disposeBag)
+//
+//strikes.onNext("A")
+//strikes.onNext("B")
+//strikes.onNext("C")
+//
+//strikes.onCompleted()
+
+// ELEMENT AT
+
 let strikes = PublishSubject<String>()
 let disposeBag = DisposeBag()
 
-strikes
-    .ignoreElements()
-    .subscribe { _ in
-        print("[Subscription is called]")
-    }.disposed(by: disposeBag)
+strikes.elementAt(2)
+    .subscribe(onNext: { _ in
+        print("You are out!")
+    }).disposed(by: disposeBag)
 
-strikes.onNext("A")
-strikes.onNext("B")
-strikes.onNext("C")
-
-strikes.onCompleted()
+strikes.onNext("X")
+strikes.onNext("X")
+strikes.onNext("X")
