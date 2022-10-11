@@ -331,3 +331,17 @@ import PlaygroundSupport
 //john.score.accept(45)
 //mary.score.accept(99)
 
+//-------------------------------------------------//
+// SECTION 8: IMPLEMENTING APP - GOODNEWS          //
+//-------------------------------------------------//
+
+//-------------------------------------------------//
+// SECTION 7: COMBINING OPERATORS                  //
+//-------------------------------------------------//
+
+let disposeBag = DisposeBag()
+let numbers = Observable.of(2,3,4)
+let observable = numbers.startWith(1)
+observable.subscribe(onNext: {
+    print($0)
+}).disposed(by: disposeBag)
