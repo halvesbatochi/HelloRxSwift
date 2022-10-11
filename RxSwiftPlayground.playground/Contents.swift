@@ -232,20 +232,39 @@ import PlaygroundSupport
 
 // TAKE UNTIL
 //
+//let disposeBag = DisposeBag()
+//
+//let subject = PublishSubject<String>()
+//let trigger = PublishSubject<String>()
+//
+//subject.takeUntil(trigger)
+//    .subscribe(onNext: {
+//        print($0)
+//    }).disposed(by: disposeBag)
+//
+//subject.onNext("1")
+//subject.onNext("2")
+//
+//trigger.onNext("X")
+//
+//subject.onNext("3")
+
+//-------------------------------------------------//
+// SECTION 6: IMPLEMENTING APP - GOODLIST          //
+//-------------------------------------------------//
+
+//-------------------------------------------------//
+// SECTION 7: TRANSFORMING OPERATORS               //
+//-------------------------------------------------//
+
+// TO ARRAY
+//
 let disposeBag = DisposeBag()
 
-let subject = PublishSubject<String>()
-let trigger = PublishSubject<String>()
-
-subject.takeUntil(trigger)
+Observable.of(1,2,3,4,5)
+    .toArray()
     .subscribe(onNext: {
         print($0)
     }).disposed(by: disposeBag)
 
-subject.onNext("1")
-subject.onNext("2")
-
-trigger.onNext("X")
-
-subject.onNext("3")
 
