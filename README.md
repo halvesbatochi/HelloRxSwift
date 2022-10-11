@@ -24,3 +24,9 @@
         * Take
         * Take while
         * Take until
+
+    * Transforming operators
+        * To array
+        * Map
+        * Flat Map
+        * Flat Map latest
