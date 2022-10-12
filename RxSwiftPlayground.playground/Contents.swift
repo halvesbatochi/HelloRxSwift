@@ -419,21 +419,31 @@ import PlaygroundSupport
 //button.onNext(())
 //button.onNext(())
 
-// Reduce
+// REDUCE
 //
-let disposeBag = DisposeBag()
+//let disposeBag = DisposeBag()
+//
+//let source = Observable.of(1,2,3)
+//source.reduce(0, accumulator: +)
+//    .subscribe(onNext: {
+//        print($0)
+//    }).disposed(by: disposeBag)
+//
+//// OTHER WAY
+//
+//source.reduce(0, accumulator: {
+//    summary, newValue in
+//    return summary + newValue
+//}).subscribe(onNext: {
+//    print($0)
+//}).disposed(by: disposeBag)
 
-let source = Observable.of(1,2,3)
-source.reduce(0, accumulator: +)
-    .subscribe(onNext: {
-        print($0)
-    }).disposed(by: disposeBag)
-
-// OTHER WAY
-
-source.reduce(0, accumulator: {
-    summary, newValue in
-    return summary + newValue
-}).subscribe(onNext: {
-    print($0)
-}).disposed(by: disposeBag)
+// SCAN
+//
+//let disposeBag = DisposeBag()
+//let source = Observable.of(1,2,3,4,5,6)
+//
+//source.scan(0, accumulator: +)
+//    .subscribe(onNext: {
+//        print($0)
+//    }).disposed(by: disposeBag)
