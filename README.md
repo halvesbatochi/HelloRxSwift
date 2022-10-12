@@ -30,3 +30,12 @@
         * Map
         * Flat Map
         * Flat Map latest
+
+    * Combining operators
+        * Starts with
+        * Concat
+        * Merge
+        * Combine Latest
+        * With Latest From
+        * Reduce
+        * Scan
