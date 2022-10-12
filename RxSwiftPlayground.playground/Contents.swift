@@ -336,7 +336,7 @@ import PlaygroundSupport
 //-------------------------------------------------//
 
 //-------------------------------------------------//
-// SECTION 7: COMBINING OPERATORS                  //
+// SECTION 9: COMBINING OPERATORS                  //
 //-------------------------------------------------//
 //
 // STARTS WITH
@@ -381,20 +381,40 @@ import PlaygroundSupport
 
 // COMBINE LATEST
 //
-let disposeBag = DisposeBag()
-let left = PublishSubject<Int>()
-let right = PublishSubject<Int>()
+//let disposeBag = DisposeBag()
+//let left = PublishSubject<Int>()
+//let right = PublishSubject<Int>()
+//
+//let observable = Observable.combineLatest(left,right,resultSelector: { lastLeft, lastRight in
+//    "\(lastLeft) \(lastRight)"
+//})
+//
+//let disposable = observable.subscribe(onNext: { value in
+//    print(value)
+//})
+//
+//left.onNext(45)
+//right.onNext(1)
+//left.onNext(30)
+//right.onNext(1)
+//right.onNext(2)
 
-let observable = Observable.combineLatest(left,right,resultSelector: { lastLeft, lastRight in
-    "\(lastLeft) \(lastRight)"
-})
-
-let disposable = observable.subscribe(onNext: { value in
-    print(value)
-})
-
-left.onNext(45)
-right.onNext(1)
-left.onNext(30)
-right.onNext(1)
-right.onNext(2)
+// WITH LATEST FROM
+//
+//let disposeBag = DisposeBag()
+//
+//let button = PublishSubject<Void>()
+//let textField = PublishSubject<String>()
+//
+//let observable = button.withLatestFrom(textField)
+//let disposable = observable.subscribe(onNext: {
+//    print($0)
+//})
+//
+//textField.onNext("Sw")
+//textField.onNext("Swif")
+//textField.onNext("Swift")
+//textField.onNext("Swift Rocks!")
+//
+//button.onNext(())
+//button.onNext(())
